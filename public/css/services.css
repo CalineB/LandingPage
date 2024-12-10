@@ -1,0 +1,384 @@
+
+:root {
+    --title-bg-color: linear-gradient(8deg, rgba(8, 52, 83, 1) 0%, rgb(0, 180, 230) 41%, rgba(41, 17, 45, 1) 100%); 
+    --silver-color: silver; 
+    --bg-color: rgba(255, 255, 255, 0.05);
+    --second-bg-color:  rgb(4, 52, 83);
+    --text-color: rgb(0, 180, 230); 
+    --gray-color : rgba(114, 226, 174, 0.2);
+    --beige-color: rgba(255, 255, 255, 0.6);
+    --main-color: whitesmoke; 
+    --gold-color: #a2781dfc; 
+}
+/*
+
+body {
+    background-color: var(--second-bg-color);
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--second-bg-color);
+    padding: 1.7rem 2rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.navbar a {
+    font-size: 1.3rem;
+    color: var(--silver-color);
+    margin-left: .7rem;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 2.1rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 800px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+
+.container {
+    margin-top: 7rem;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #191a2b;
+}
+
+*/
+
+.service-wrapper {
+    padding: 5% 8%;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 5rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: transparent;
+    letter-spacing: 4px;
+    background-color: var(--second-bg-color);
+    background: var(--title-bg-color);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+h1:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    height: 8px;
+    width: 80%;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+
+}
+
+h1 span {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    animation: anim 5s linear infinite;
+}
+
+@keyframes anim {
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        left: 88%;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin: 80px;
+    perspective: 1500px;
+}
+
+.card {
+    height: 350px;
+    width: 370px;
+    background-color: var(--bg-color);
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 3% 8%;
+    box-sizing: border-box;
+    border: 0.2px solid var(--gray-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform-origin: center;
+}
+
+.card:after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    width: 120%;
+    transform: rotate(50deg);
+    background-color: var(--main-color);
+    height: 18px;
+    filter: blur(30px);
+    opacity: 0.5;
+    transition: 1s;
+}
+
+
+.card:hover:after {
+    width: 200%;
+    top: -10%;
+}
+
+.card:hover:after{
+    width: 225%;
+    top: -100%
+}
+
+
+.card i {
+    color:var(--text-color);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 4.8rem;
+}
+
+
+.card h2 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600px;
+    letter-spacing: 1px;
+}
+
+
+.card span{
+    text-align: center;
+    width: 100%;
+    margin: 12px 0;
+    color: var(--beige-color);
+}
+
+
+.card.active {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.card .default-text,
+.card .hover-text {
+    position: absolute;
+    backface-visibility: visible;
+    box-sizing: border-box;
+    transform: translateY(-20%);
+}
+
+.card .default-text {
+    display: block;
+    max-width: 90%;
+    margin: 10px auto;
+    box-sizing: border-box;
+    top: 70%;
+    opacity: 1;
+}
+
+.card:hover i,
+.card:hover h2,
+.card:hover .hover-text {
+    transform: rotateX(180deg);
+}
+
+.card .hover-text {
+    display: block;
+    opacity: 0;
+}
+
+.card:hover .hover-text {
+    max-width: 90%;
+    margin: 50% auto;
+    box-sizing: border-box;
+    opacity: 1;
+    top: 15%;
+}
+
+.card:hover .default-text {
+    opacity: 0;
+}
+
+
+i:hover {
+    display: none;
+}
+h2:hover {
+    display: none;
+}
+
+
+
+.card:hover {
+    transform: rotateX(180deg);
+    border-color: #0080ff;
+
+}
+
+.card:hover i {
+    color: #106ecc;
+}
+
+.indice {
+    color: var(--gold-color);
+    font-style: italic;
+    font-size: 14px;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+}
+
+.indice:hover {
+    color: var(--main-color);
+    text-transform:uppercase;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(1,1fr);
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+
+
+    @media (max-width: 400px) {
+        .cards {
+            grid-template-columns: repeat(1,1fr);
+        }
+        h1 {
+            font-size: 1.5rem;
+        }  
+
+        
+}}
+
+@media (max-width: 340px) {
+
+    .card {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center; 
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }  
+
+    i, h2, span {
+        width: 100%; 
+    }
+
+    .card.default-text {
+        margin-top: 10px;
+    }
+
+    .card.hover-text {
+        margin-top: 50%;
+    }
+
+    .card i {
+        font-size: 3rem;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 1rem;
+        margin: 15px 0;
+    }
+}
+
+
+@media (max-width : 300) {
+    .service-wrapper {
+        width: 90%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1,1fr);
+        width: 90%;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }  
+
+    i, h2, span, card {
+        width: 60%;
+    }
+
+    i, h2, span, card {
+        font-size: 16rem;
+    }
+}
+
+

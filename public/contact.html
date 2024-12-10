@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.DEFO'ÉlectriK</title>
+    <link rel="reset-stylesheet" href="css/style-reset.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <span>A.DEFO'ÉlectriK</span>
+    </a>
+
+    <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="index.html#homepage">Accueil</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#prices">Tarifs</a>
+        <a href="contact.html" class="active">Nous contacter</a>
+    </nav>
+</header>
+
+<body class="main">
+
+    <main class="container">
+
+    <div>
+        <h1 class="heading">Contactez-nous<span></span></h1>
+    </div>
+
+    <section class="contact" id="contact">
+
+        <form name="contact" method="POST" id="contact-form" action="thank-you" data-netlify="true" data-netlify-recaptcha="true"  data-netlify-honeypot="bot-field">
+            <div class="rows">
+                <div class="col left">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Vos nom et prénom" required>
+                        <input type="email" name="email" placeholder="Votre adresse mail">
+
+                        <input type="tel" name="phone" placeholder="Votre numéro de téléphone" required>
+                        <input type="text" name="subject" placeholder="Sujet">
+                    </div>
+                </div>
+        
+                <div class="col right">
+                    <div class="input-group-text">
+                        <textarea name="message" cols="50" rows="10" placeholder="Votre message"></textarea>
+                        <input type="submit" value="Send message" class="btn">
+                        <div class="field">
+                            <div data-netlify-recaptcha="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+</main>
+
+    <footer>
+        <a href="#" id="scroll-to-top" class="scroll-btn">
+            &#8593;
+        </a>
+        <p>Created by CalineB</p>
+        <p>December 2024</p>
+    </footer>
+
+ <script src="script/thank-you.js"></script>
+<script src="script/script.js"></script>
+<script src="script/hide.js"></script>
+
+</body>
+
+
+
+</html>
