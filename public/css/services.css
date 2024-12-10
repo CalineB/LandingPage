@@ -304,23 +304,26 @@ h2:hover {
 
 @media (max-width: 900px) {
     .cards {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
     h1 {
         font-size: 3.5rem;
     }
+}
 
-
-    @media (max-width: 400px) {
+@media (max-width: 400px) {
         .cards {
             grid-template-columns: repeat(1,1fr);
         }
         h1 {
-            font-size: 1.5rem;
-        }  
+            font-size: 3.5rem;
+        }
 
+        span{
+            font-size: 1rem;
+        }
         
-}}
+}
 
 @media (max-width: 340px) {
 
@@ -356,6 +359,11 @@ h2:hover {
         font-size: 1rem;
         margin: 15px 0;
     }
+
+
+    span{
+        font-size: 1rem;
+    }
 }
 
 
@@ -378,6 +386,10 @@ h2:hover {
 
     i, h2, span, card {
         font-size: 16rem;
+    }
+
+    span{
+        font-size: 1rem;
     }
 }
 
