@@ -328,3 +328,39 @@ footer p {
         font-size: 3.5rem;
     }
 }
+
+
+
+/* Styles de base */
+.response-message {
+    font-size: 5rem;
+    text-align: center;
+    justify-content: center;
+    margin-top: auto;
+    color: rgba(234, 245, 234, 0.951);
+}
+
+.response-sub-message {
+    color: rgba(218, 165, 32, 0.681);
+}
+
+@media (max-width: 768px) {
+    .response-message {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    .response-sub-message {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .response-message {
+        font-size: 1rem;
+    }
+
+    .response-sub-message {
+        font-size: .5rem;
+    }
+}
