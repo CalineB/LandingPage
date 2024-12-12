@@ -303,11 +303,53 @@ h2:hover {
 }
 
 @media (max-width: 900px) {
+    html, body, section#homepage.container {
+        width: 100%;
+    }
+
     .cards {
         grid-template-columns: repeat(2,1fr);
     }
-    h1 {
-        font-size: 3.5rem;
+    h2 {
+        font-size: .3rem;
+    }
+
+    span{
+        font-size: 2rem;
+    }
+
+    span.default-text,
+    span.hover-text {
+        font-size: 18px;
+    }
+
+    span.hover-text {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .card {
+        width: 350px;
+    }
+    div.services div.cards h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: repeat(1,1fr);
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    span{
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 310px;
     }
 }
 
@@ -362,8 +404,9 @@ h2:hover {
 
 
     span{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
+    
 }
 
 

@@ -15,7 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-html {
+html, body, section#homepage.container {
     width: 100%;
 }
 
@@ -140,8 +140,87 @@ footer p {
 }
 
 
+@media(max-width: 340PX) {
+    html {
+        width: 50%;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--gold-color);
+        font-weight: bold;
+        left : 17rem
+    }
+
+    .secteur {
+        width: 20%;
+    }
+
+    .secteur {
+        width: 20%;
+    }
+
+    div.secteur div.zones {
+        font-size: 14px;
+    }
+
+    div.secteur div.zones {
+        font-size: 14px;
+    }
+
+    div.secteur div.zones p {
+        padding: 4px;
+        margin: 2px;
+    }
+
+    div.secteur h4 {
+        font-size: 18px;
+    }
+
+    div.presentation p {
+        font-size: 14px;
+    }
+
+    .navbar.active {
+        display: flex;
+        background-color: var(--gold-color);
+        width: 10rem;
+        right: 5rem;
+    }
+
+    .navbar a {
+        margin-top: 10px;
+        padding: 5px 5px; 
+        text-align: center;
+        width: 100%;
+        color: var(--second-bg-color);
+        font-weight: bold;
+    }
+    
+}
 
 
+.tarif-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-out;
+}
+
+.tarif-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 @media (max-width: 480px) {
@@ -249,10 +328,42 @@ footer p {
         font-size: 1.8rem;
     }
 
-    .navbar a {
-        font-size: 1.2rem;
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+
     }
 
+    #menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--gold-color);
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        right: 7rem;
+        z-index: 10;
+    }
+
+    .navbar.active {
+        display: flex;
+        background-color: var(--gold-color);
+        width: 10rem;
+        right: 5rem;
+    }
+
+    .navbar a {
+        margin-top: 10px;
+        padding: 5px 5px; 
+        text-align: center;
+        width: 100%;
+        color: var(--second-bg-color);
+        font-weight: bold;
+    }
     .scroll-btn {
         font-size: 2.8rem;
     }
@@ -364,3 +475,5 @@ footer p {
         font-size: .5rem;
     }
 }
+
+
