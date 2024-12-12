@@ -12,11 +12,12 @@
 
 
 
-html {
+html, body {
     overflow-x: hidden;
 }
 
 html, body {
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -24,14 +25,21 @@ html, body {
     flex-direction: column;
 }
 
+.navbar {
+    width: 100vh;
+}
 
 main {
     flex: 1;
     width: 100%;
 }
 
+section footer {
+    width: 100%;
+}
 
 .header {
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -99,7 +107,11 @@ main {
     margin-left: 20px;
 }
 
+
 h1 {
+
+    letter-spacing: 4px;
+    background: var(--title-bg-color);
     font-size: 4rem;
     color: var(--main-color);
     text-decoration: none;
@@ -114,12 +126,14 @@ h1 {
     background-clip: none;
     -webkit-text-fill-color: transparent;
     position: relative;
+    margin-bottom: 7rem;
 }
 
 .rows {
+    display: flex;
     height: 100%;
     margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 10rem;
 }
 
 h1:after {
@@ -179,17 +193,17 @@ h1 span {
 }
 
 .input-group-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centre horizontalement */
-    justify-content: center; /* Centre verticalement */
-    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
+    justify-content: center !important; 
+    width: 100% !important;
 }
 
 textarea {
-    margin: 1rem auto; /* Centrage horizontal */
-    width: 80%; /* Ajustez si nécessaire */
-    max-width: 600px; /* Limite la largeur */
+    margin: auto; 
+    width: 80%; 
+    max-width: 600px;
     padding: 1rem;
     border: 3px solid rgb(2, 2, 28);
     border-radius: 5px;
@@ -197,7 +211,7 @@ textarea {
 }
 
 input[type="submit"] {
-    margin: 1rem auto; /* Centrage horizontal */
+    margin: 1rem auto; 
     display: block;
     background-color: #00b4e6;
     color: white;
@@ -221,23 +235,6 @@ body {
 
 }
 
-
-h1 {
-    color: var(--main-color);
-    font-size: 7rem;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: transparent;
-    letter-spacing: 4px;
-    background-color: var(--second-bg-color);
-    background: var(--title-bg-color);
-    -webkit-background-clip: text;
-    background-clip: none;
-    -webkit-text-fill-color: transparent;
-    position: relative;
-}
-
-
-
 #contact-form {
     display: flex;
     justify-content: center;
@@ -258,6 +255,7 @@ h1 {
     justify-content: center;
     width: 48%;
     margin-right: 3.5rem;
+
 }
 
 .input-box {
@@ -281,6 +279,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 48%;
     margin-left: 3.5rem;
 
@@ -292,7 +291,7 @@ h1 {
 }
 
 textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -302,8 +301,9 @@ textarea {
 }
 
 input.btn {
-    position: relative;
-    width: 18rem;
+    width: auto;
+    margin-left: auto !important;
+    display: block;
 }
 
 textarea:focus {
@@ -326,8 +326,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: var(--gold-color);
 }
-
-
 
 
 footer {
@@ -380,8 +378,11 @@ footer p {
 
 @media (max-width: 452px) {
     main {
-        margin-bottom: 20rem;
+        margin-bottom: 25rem;
+    }
 
+    form {
+        padding-right: 2rem;
     }
 
     .rows {
@@ -393,6 +394,8 @@ footer p {
     
     .col.left, .col.right {
         width: 48%; 
+        margin-left: 0;
+        margin-right: 0;
     }
 
     textarea {
@@ -436,89 +439,40 @@ footer p {
         font-weight: bold;
     }
 
-}
-
-@media (max-width: 567px){
-    
-    #menu-icon {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--gold-color);
-        font-weight: bold;
-        position: absolute;
-        right: 10rem;
-        font-size: 2rem;
-    }
-    .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-
-    }
-
-    #menu-icon {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--gold-color);
-        font-weight: bold;
-    }
-
-    .navbar.active {
-        display: flex;
-        background-color: var(--gold-color);
-        width: 10rem;
-        right: 10rem;
-    }
-
-    .navbar a {
-        margin-top: 10px;
-        padding: 5px 5px; 
-        text-align: center;
-        width: 100%;
-        color: var(--second-bg-color);
-        font-weight: bold;
-    }
-    div.input-box {
-        margin-bottom: 1rem;
-    }
 
 }
+
 
 @media (max-width: 570px) {
     .heading {
         font-size: 2rem;
         margin-bottom: 7rem;
     }
+    
+    footer {
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+    }
 
     main {
-        margin-bottom: 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     input.btn {
-        width: 13rem;
-        margin: 1rem auto;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 
-    footer {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-        margin-top: auto;
+    div.input-box input,
+    div.input-group-text textarea{
+        width: 90%;
     }
-
-    footer p {
-        margin-bottom: 0.5rem;
-    }
-
-    
+  
     .navbar {
         display: none;
         flex-direction: column;
@@ -534,13 +488,17 @@ footer p {
         cursor: pointer;
         color: var(--gold-color);
         font-weight: bold;
+        position: absolute;
+        top: 20px;
+        right: 10rem;
+        z-index: 10;
     }
 
     .navbar.active {
         display: flex;
         background-color: var(--gold-color);
         width: 10rem;
-        right: 10rem;
+        right: 5rem;
     }
 
     .navbar a {
@@ -552,7 +510,49 @@ footer p {
         font-weight: bold;
     }
 
+
+    .contact form {
+        display: flex;
+        flex-direction: column; 
+        gap: 1rem;
+    }
+
+    .input-box input, .input-group-text textarea, .input-group-text input {
+        width: 100%; 
+        padding: 1rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .input-box input[type="submit"] {
+        width: auto; 
+        background-color: var(--gold-color);
+        color: var(--second-bg-color);
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .rows {
+        display: block; 
+    }
+
+    .col.left, .col.right {
+        width: 100%; 
+    }
+
+
+    div.col.right,
+    div.col.left {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    body {
+        margin-bottom: 5rem;
+    }
 }
+
 
 /*
 @media (max-width: 667px){
