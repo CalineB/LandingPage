@@ -88,6 +88,10 @@ body {
     --beige-color: rgba(255, 255, 255, 0.6);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 #prices {
     width: 90%;
     margin-right: auto;
@@ -120,19 +124,25 @@ body {
     background-color: var(--bg-color);
     color: var(--main-color);
     text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .tarifs h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
+    padding-bottom: 2rem;
+    transition: margin-bottom 0.3s ease;
 }
+
 
 .tarif-item {
     background-color: var(--second-bg-color);
-    padding: 20px;
+    padding: 5px;
     margin: 15px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .tarif-item h3 {
@@ -171,6 +181,9 @@ body {
     background-color: var(--gold-color);
     transform: scale(1.05);
     transition: all 0.3s ease;
+    transform-origin: center;
+    margin-top: 5px;
+    margin-top: 5px;
 }
 
 .tarif-item:hover span {

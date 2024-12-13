@@ -296,6 +296,10 @@ h2:hover {
     letter-spacing: 3px;
 }
 
+.contact-me {
+    color: white;
+}
+
 @media (max-width: 1200px) {
     .cards {
         grid-template-columns: repeat(2,1fr);
