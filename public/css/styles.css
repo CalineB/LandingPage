@@ -139,8 +139,22 @@ footer p {
     background-color: var(--gold-color); 
 }
 
+@media (max-width: 295px) {
+    html {
+        width: 30%;
+    }
 
-@media(max-width: 340PX) {
+    #menu-icon {
+        display: block;
+        font-size: 15px;
+        cursor: pointer;
+        color: var(--gold-color);
+        font-weight: bold;
+    }
+}
+
+
+@media(max-width: 340px) {
     html {
         width: 50%;
     }
@@ -221,6 +235,7 @@ footer p {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 
 @media (max-width: 480px) {
@@ -339,13 +354,13 @@ footer p {
 
     #menu-icon {
         display: block;
-        font-size: 24px;
+        font-size: 3rem;
         cursor: pointer;
         color: var(--gold-color);
         font-weight: bold;
         position: absolute;
         top: 20px;
-        right: 7rem;
+        right: 2rem;
         z-index: 10;
     }
 
